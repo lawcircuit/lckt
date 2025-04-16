@@ -39,7 +39,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -82,16 +82,16 @@ body {
 }
 
 .home-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     border-bottom: 2px solid black;
     display: inline-block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     animation: fadeInUp 1s ease-out 0.2s backwards; /* Fade in with slight delay */
 }
 
 .home-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1rem 0;
     animation: fadeInUp 1s ease-out 0.4s backwards; /* Fade in with more delay */
 }
@@ -254,7 +254,7 @@ body {
 .feature-item {
     display: flex;
     align-items: center;
-    background: #f9f9f9;
+    background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
@@ -316,123 +316,332 @@ body {
 
 }
 
-/* How to Get Started Section (Timeline) */
-/* How to Get Started Section (Timeline with Background Images) */
-.steps-section {
-    padding: 4rem 1rem;
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Clip any potential overflow from background images */
-    background-color: #2e111019; /* A light background color as a fallback */
+.how-to-start-section {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center; /* Center title */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.steps-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    bottom: 0;
-    width: 2px;
-    background-color: #2e1110;
-    transform: translateX(-50%);
-}
-
-.steps-section h2 {
+.section-title {
+    font-family: 'Elegant Serif', serif; /* Replace with your chosen elegant serif font */
     font-size: 2.5rem;
-    color: #2e1110;
-    margin-bottom: 2rem;
-    animation: slideInRight 0.7s ease-out 0.5s backwards; /* Slide in heading */
-    background-color: rgba(249, 249, 249, 0.8); /* Add a semi-transparent background for readability */
-    padding: 0.5rem 1rem; /* Add some padding around the heading */
-    border-radius: 5px; /* Optional rounded corners */
-    display: inline-block; /* To contain the background */
-}
-
-.timeline {
-    list-style: none;
-    padding: 0;
-    position: relative;
-    z-index: 1; /* Ensure timeline elements are above the background */
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background-color: #2e1110;
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    margin-bottom: 2rem;
-    position: relative;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.timeline-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.timeline-item:nth-child(odd) {
-    padding-right: calc(50% + 20px);
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    padding-left: calc(50% + 20px);
-    text-align: left;
-}
-
-.timeline-item-content {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for content */
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    display: inline-block; /* Adjust width based on content */
-    max-width: 45%; /* Limit width */
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content {
-    margin-left: auto;
-}
-
-.timeline-item-number {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    background-color: #2e1110;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: bold;
-    z-index: 2; /* Ensure number is above the background */
+    text-decoration: underline;
+    color: #333; /* Black text */
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.6s ease-out;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-number {
-    left: calc(50% - 60px);
+.main-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Space between illustration and steps */
+    margin-bottom: 3rem;
+    text-align: left; /* Align steps to the left */
 }
 
-.timeline-item:nth-child(even) .timeline-item-number {
-    left: calc(50% + 60px);
+.visual-block {
+    flex: 0 0 40%; /* Adjust width of the visual block */
+    animation: slideInLeft 0.7s ease-out;
 }
 
-.timeline-item h4 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: #2e1110;
+.illustration-box {
+    background-color: #800000; /* Dark maroon */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 2rem;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.illustration-box img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.steps-list {
+    flex: 1; /* Take remaining space */
+}
+
+.steps-list p {
+    font-family: sans-serif; /* Clean white font */
+    color: #333; /* Black text */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.steps-list p:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.steps-list p:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.steps-list p:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.steps-list p:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.steps-list a {
+    color: inherit; /* Inherit black color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.steps-list a:hover {
+    text-decoration: underline;
+}
+
+.progress-illustration {
+    text-align: right;
+    animation: slideInRight 0.7s ease-out;
+}
+
+.progress-illustration img {
+    max-width: 200px; /* Adjust size of the progress illustration */
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Hover animation */
+}
+
+.progress-illustration img:hover {
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .visual-block {
+        width: 80%;
+        margin: 0 auto 2rem;
+        animation: fadeInUp 0.6s ease-out; /* Different animation on mobile */
+    }
+
+    .steps-list {
+        text-align: left;
+    }
+
+    .progress-illustration {
+        text-align: center;
+        margin-top: 2rem;
+        animation: fadeInUp 0.6s ease-out; /* Different animation on mobile */
+    }
+}
+
+/* Keyframes for fadeInUp animation (if you don't have it already) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .steps-heading-container {
+        padding: 1.5rem;
+    }
+
+    .steps-heading-container h2 {
+        font-size: 1.8rem;
+        text-align: left; /* Keep left alignment on smaller screens */
+    }
+
+    .steps-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .steps-section::after {
+        width: 100%;
+        height: 30%;
+        border-radius: 50% 50% 0 0;
+        transform: translateX(0) translateY(0);
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .steps-image {
+        width: 80%;
+        margin-bottom: 2rem;
+        margin-right: 0; /* Remove right margin on smaller screens */
+        text-align: center;
+    }
+
+    .steps-image img {
+        max-width: 200px; /* Adjust image size for smaller screens */
+    }
+
+    .timeline {
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 1rem;
+    }
+
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+        left: -0.3rem;
+        font-size: 1.2rem;
+        top: 0.3rem;
+        color: #fff; /* Adjust bullet color for contrast */
+    }
+
+    .timeline-item h4 {
+        color: #fff; /* Adjust text color for contrast */
+    }
+
+    .steps-visual-cue {
+        display: none; /* Ensure it's hidden on smaller screens as well */
+    }
+}
+
+/* Keyframes for fadeInUp animation (if you don't have it already) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .steps-heading-container {
+        padding: 1.5rem;
+    }
+
+    .steps-heading-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .steps-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .steps-section::after {
+        width: 100%;
+        height: 30%;
+        border-radius: 50% 50% 0 0;
+        transform: translateX(0) translateY(0);
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .steps-image {
+        width: 80%;
+        margin-bottom: 2rem;
+        margin-right: 0; /* Remove right margin on smaller screens */
+        text-align: center;
+    }
+
+    .steps-image img {
+        max-width: 200px; /* Adjust image size for smaller screens */
+    }
+
+    .timeline {
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 1rem;
+    }
+
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+        left: -0.3rem;
+        font-size: 1.2rem;
+        top: 0.3rem;
+        color: #fff; /* Adjust bullet color for contrast */
+    }
+
+    .timeline-item h4 {
+        color: #fff; /* Adjust text color for contrast */
+    }
+
+    .steps-visual-cue {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 2rem;
+        max-width: 100px;
+    }
 }
 
 /* Keyframes for Animations */
