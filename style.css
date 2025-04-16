@@ -604,3 +604,112 @@ body {
 h1, h2, h3, h4 {
     letter-spacing: 1px;
 }
+/* Existing media query for typical smartphones */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* Single column for smartphones */
+        gap: 3rem;
+    }
+
+    .features-grid > .feature-item {
+        flex-direction: column; /* Stack text and image */
+        text-align: center; /* Center content */
+    }
+
+    .features-grid > .feature-item .feature-text {
+        margin: 0 0 2rem 0; /* Adjust margins for stacked layout */
+        text-align: center;
+    }
+
+    .features-grid > .feature-item .feature-image {
+        text-align: center;
+    }
+
+    .features-grid > .feature-item:nth-child(even) {
+        flex-direction: column; /* Keep stacking */
+    }
+
+    .features-grid > .feature-item:nth-child(even) .feature-text {
+        margin: 0 0 2rem 0;
+        text-align: center;
+    }
+
+    .features-grid > .feature-item:nth-child(even) .feature-image {
+        text-align: center;
+    }
+
+    .timeline-item {
+        padding-right: 20px !important; /* Reduce padding */
+        padding-left: 20px !important;
+        text-align: center !important; /* Center timeline content */
+    }
+
+    .timeline-item-content {
+        max-width: 90% !important; /* Make content wider */
+        margin: 1rem auto !important; /* Center the content block */
+    }
+
+    .timeline::before {
+        left: 20px; /* Adjust vertical line position */
+    }
+
+    .timeline-item-number {
+        left: 20px !important; /* Align number with the line */
+        transform: translateY(-50%); /* Adjust vertical centering */
+    }
+}
+
+/* Media query for slightly larger smartphones (like iPhone 10 and above, Samsung S10 and above in portrait) */
+@media (min-width: 769px) and (max-width: 896px) { /* Adjust max-width as needed */
+    .features-grid {
+        grid-template-columns: 1fr; /* Still single column for this range, can adjust if needed */
+        gap: 3rem;
+    }
+
+    .features-grid > .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-grid > .feature-item .feature-text {
+        margin: 0 0 2rem 0;
+        text-align: center;
+    }
+
+    .features-grid > .feature-item .feature-image {
+        text-align: center;
+    }
+
+    .features-grid > .feature-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .features-grid > .feature-item:nth-child(even) .feature-text {
+        margin: 0 0 2rem 0;
+        text-align: center;
+    }
+
+    .features-grid > .feature-item:nth-child(even) .feature-image {
+        text-align: center;
+    }
+
+    .timeline-item {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+        text-align: center !important;
+    }
+
+    .timeline-item-content {
+        max-width: 90% !important;
+        margin: 1rem auto !important;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item-number {
+        left: 20px !important;
+        transform: translateY(-50%);
+    }
+}
