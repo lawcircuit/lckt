@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Crimson Text;
 }
 
 body {
@@ -23,6 +23,27 @@ body {
     z-index: 1000;
     animation: slideInDown 0.5s ease-out; /* Animation for navbar */
 }
+.navbar {
+    display: flex;
+    justify-content: center; /* centers content horizontally */
+    align-items: center;
+    background-color: #888;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
 
 .nav-logo {
     color: white;
@@ -101,43 +122,36 @@ body {
 /* Community */
 /* Community Section with Fade-In Animation (Removed Dim/Shadow) */
 .community-section {
-    background: #381713 url('images/community-background.jpg') center/cover no-repeat; /* Removed 'fixed' for parallax */
-    color: white;
-    padding: 5rem 2rem;
-    text-align: center;
-    position: relative;
-    animation: fadeInUp 1s ease-out 0.5s backwards; /* Added fade-in animation */
-}
-
-.community-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.6); */ /* Removed the background color that created the dim/shadow */
-}
-
-.community-container {
+    background-color: #3B1B17; /* dark brown */
+    padding: 60px 20px;
+    font-family: 'Georgia', serif;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin:20px;
+  }
+  
+  .community-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem; /* Increased gap for better spacing */
-    flex-wrap: wrap;
-    max-width: 1000px; /* Slightly wider container */
-    margin: 0 auto;
-    z-index: 1;
-    text-align: left; /* Align text to the left within the container */
-}
-
-.community-img {
-    width: 300px; /* Slightly larger image */
-    border-radius: 10px;
-    margin-bottom: 0; /* Remove default margin */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: slideInLeft 1s ease-out 0.7s backwards; /* Slide in image */
-}
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* responsive */
+  }
+  
+  .community-image img {
+    max-width: 100%;
+    height: auto;
+    width: 350px; /* adjust as needed */
+    margin-right: 40px;
+  }
+  
+  .community-text {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
 
 .community-text {
     max-width: 550px; /* Limit text width for readability */
@@ -249,7 +263,7 @@ body {
 
 .feature-text {
     flex: 1;
-    text-align: left;
+    text-align: center;
     margin-right: 3rem;
 }
 
@@ -298,7 +312,6 @@ body {
     .features-grid {
         grid-template-columns: 1fr; /* Single column for smartphones */
         gap: 3rem;
-        max-width: 95%;
     }
 
 }
@@ -578,4 +591,16 @@ body {
 .footer-bottom p {
     font-size: 0.8rem;
     color: #aaa;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px; /* or try 1px if you want more spacing */
+}
+h1, h2, h3, h4 {
+    letter-spacing: 1px;
 }
