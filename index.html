@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Law CircuitT</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#whyus">Why Us</a></li>
+                <li><a href="#how">How to Get Started</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-section" id="home">
+            <div class="home-content">
+                <h1>LAWCKT</h1>
+                <p>Shape the Future of Law with Us</p>
+                <a href="#join" class="btn">Join Us</a>
+            </div>
+            <div class="home-image">
+                <img src="illustration.png" alt="Law Illustration">
+            </div>
+        </section>
+
+        <section class="community-section">
+            <div class="community-container">
+                <img src="community.png" alt="Community Illustration" class="community-img">
+                <div class="community-text">
+                    <h2>Join Our Legal Impact Community</h2>
+                    <p>Connect with a diverse network of ambitious law students, experienced lawyers, and dedicated NGOs, all driven by a passion for creating positive change in the legal field.</p>
+                    <p>Collaborate on meaningful projects, share insights, and build lasting relationships that will empower your journey and amplify your impact.</p>
+                    <p>Be part of a vibrant ecosystem where you can learn, grow, and contribute to initiatives that truly matter.</p>
+                    </div>
+            </div>
+        </section>
+        <section class="why-us section" id="whyus">
+            <h2>Why us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h4>Verified Internship Opportunities</h4>
+                        <p>Both paid and unpaid roles from trusted legal firms and organizations.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="5.png" alt="Verified Internship Opportunities">
+                    </div>
+                </div>
+        
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h4>CV-Based Matching</h4>
+                        <p>We connect you directly with opportunities that align with your skills and experiences.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="6.png" alt="CV-Based Matching">
+                    </div>
+                </div>
+        
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h4>Personalized Internship Roadmaps</h4>
+                        <p>Get a clear and customized path to help you navigate your legal internship journey.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="7.png" alt="Personalized Internship Roadmaps">
+                    </div>
+                </div>
+        
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h4>Mentorship & Career Guidance</h4>
+                        <p>Receive expert advice from experienced legal professionals to shape your career with confidence.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="8.png" alt="Mentorship & Career Guidance">
+                    </div>
+                </div>
+            </div>
+        </section>
+             
+
+        <section class="steps-section section" id="how">
+            <h2>How to get started</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-item-content">
+
+                        <h4>Join Our WhatsApp Community</h4>
+                        <p>Click the "Join Us" button to connect with our community on WhatsApp.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-item-content">
+                   
+                        <h4>Submit Your CV</h4>
+                        <p>Follow the instructions in the WhatsApp group to submit your CV.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-item-content">
+                      
+                        <h4>Get Matched with Opportunities</h4>
+                        <p>Our system will match your CV with relevant internship opportunities.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-item-content">
+                    
+                        <h4>Stay Updated</h4>
+                        <p>Receive notifications about new opportunities and next steps through the WhatsApp community.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <script>
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); // Stop observing once shown
+                    }
+                });
+            }
+        
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // Show when 50% of the element is visible
+            });
+        
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        </script>
+
+<section class="join-section section" id="join">
+    <div class="join-container">
+        <h2>Ready to shape your legal journey?</h2>
+        <p class="join-subtitle">Click below to join our vibrant WhatsApp community and take the first step.</p>
+        <a href="https://chat.whatsapp.com/ErABEUTFl8HByJmPNhZaVJ" class="join-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+        </a>
+        <p class="join-incentive">Unlock exclusive opportunities and connect with like-minded individuals!</p>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-note">
+                <h3>Your Gateway to Legal Opportunities</h3>
+                <p>At LAWCKT, we are passionately dedicated to empowering the next generation of legal minds. We strive to connect talented law students and graduates with meaningful internship and career opportunities within trusted legal firms and organizations. Our mission is to build a supportive community where you can gain invaluable experience and make a significant impact in the legal field.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <p>We're here to assist you on your journey. Feel free to reach out to our team members:</p>
+                <div class="contact-person">
+                    <h4>Aakarsh Shrivastava</h4>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:aakarshshriv@gmail.com">aakarshshriv@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+917982429451">+91 7982429451</a> (India)</p>
+                </div>
+                <div class="contact-person">
+                    <h4>Kanak</h4>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kanak200416@gmail.com">kanak200416@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+919540147989">+91 9540147989</a> (India)</p>
+                </div>
+                <div class="contact-general">
+                    <h4>General Inquiries & Support</h4>
+                    <p><i class="fas fa-envelope"></i> Mail Us: <a href="mailto:circuitlaw@gmail.com">circuitlaw@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp Us: <a href="#">Chat with us on WhatsApp</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LAWCKT. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
